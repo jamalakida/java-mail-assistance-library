@@ -55,7 +55,7 @@
 ```
 
 - For Kotlin, SBT, Ivy, Grape, Leiningen, Buildr ->
-  <a href="https://central.sonatype.com/artifact/io.github.jamalakida/java-mail-assistance-library">Maven Central</a> | <a href="https://mvnrepository.com/artifact/io.github.jamalakida/java-mail-assistance-library">Maven Repository</a> 
+  <a href="https://central.sonatype.com/artifact/io.github.jamalakida/java-mail-assistance-library">Maven Central</a> | <a href="https://mvnrepository.com/artifact/io.github.jamalakida/java-mail-assistance-library/1.0.0">Maven Repository</a> 
 
 ## <a id="responses"></a> Response Involved
 - <a href="#usage-single-data">Normal Data Response</a>
