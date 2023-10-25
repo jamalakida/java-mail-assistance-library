@@ -32,7 +32,7 @@ public class MailAssistanceImpl implements MailAssistance {
      * @param subject - Mail subject
      * @param body - Mail Body
      * @return - MimeMessage
-     * @throws MessagingException
+     * throws - MessagingException
      */
     private MimeMessage returnMimeMessage(@NonNull String sender, @NonNull String receiver, @NonNull String subject, @NonNull String body) {
         try {
