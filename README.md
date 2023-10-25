@@ -88,13 +88,23 @@ Example:
                 "MAIL LIBRARY", "Hello Jamal");
 ```
 
-- Response:
+- Corresponding success Response:
 ```bash
 Example: 
   
    {
      "error":false,
      "message":"Email sent to janedoe@gmail.com"
+   }
+```
+
+- Corresponding failure Response:
+```bash
+Example: 
+  
+   {
+     "error":false,
+     "message":"Failed to send Email to janedoe@gmail.com"
    }
 ```
 
@@ -107,7 +117,7 @@ Example:
                 "MAIL LIBRARY", "Hello Jamal");
 ```
 
-- Response:
+-  Corresponding success Response:
 ```bash
 Example: 
 
@@ -115,6 +125,24 @@ Example:
       {
          "error":false,
          "message":"Email sent to janedoe@gmail.com"
+       },
+       
+      {
+       "error":false,
+       "message":"Email sent to johndoe@gmail.com"
+     }
+    ]
+ 
+```
+
+-  With failure Response:
+```bash
+Example: 
+
+    [
+      {
+         "error":false,
+         "message":"Failed to send Email to janedoe@gmail.com"
        },
        
       {
