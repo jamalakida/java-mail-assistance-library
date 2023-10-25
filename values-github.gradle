@@ -1,10 +1,10 @@
 //--------------- PACKAGE DETAILS ----------------------------------
 ext.packageGroupId = 'com.jamal'
-ext.packagesArtifactId = 'java-mail-assistance-library'
-ext.packageVersion = '3.0.0'
+ext.packagesArtifactId = 'java-mail-assistance'
+ext.packageVersion = '1.0.0'
 
 //--------------- GITHUB DETAILS & CREDENTIALS ----------------------
 ext.packagesUrl = 'https://maven.pkg.github.com/jamalakida/java-mail-assistance-library'
 ext.packagesInitializer = 'GitHubPackages'
 ext.gprUser = 'jamalakida'
-ext.gprToken = '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'
+ext.gprToken = ''

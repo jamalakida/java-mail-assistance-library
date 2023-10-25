@@ -101,7 +101,7 @@ public class MailAssistanceImpl implements MailAssistance {
      * @param subject - Mail subject
      * @param body - Mail Body
      * @return - Return response Object with status as Boolean and messages as String
-     * @throws MessagingException - Handles exception while sending mail
+     * throws MessagingException - Handles exception while sending mail
      */
     public Response sendMail(@NonNull String sender, @NonNull String receiver, @NonNull String subject, @NonNull String body){
         MimeMessage message = this.returnMimeMessage(sender, receiver, subject, body);

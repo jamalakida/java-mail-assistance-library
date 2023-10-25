@@ -1,6 +1,5 @@
 //---------------------------------------- FOR PUBLISHING TO MAVEN CENTRAL -------------------------------------
 // By default it looks for vales from gradle.properties
-
 java {
     withJavadocJar()
     withSourcesJar()
