@@ -66,7 +66,7 @@ Steps:
 - <a href="#libraryImportation">Dependency</a>
 
 ### B. Instantiate the bean of the imported Remote Assistance Library (Use one the following technique)
-- By Annotation: EnableRemoteAssistance
+- By Annotation: EnableMailAssistance
 ```bash
 @EnableMailAssistance 
 ```
@@ -150,7 +150,6 @@ Example:
        "message":"Email sent to johndoe@gmail.com"
      }
     ]
- 
 ```
 
 ## <a id="privacy"></a> Privacy
