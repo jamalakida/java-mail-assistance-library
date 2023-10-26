@@ -79,7 +79,7 @@ spring.mail.properties.mail.smtp.auth=true
     
 ```
 
-### C. Instantiate the bean of the imported Remote Assistance Library (Use one the following technique)
+### C. Instantiate the bean of the imported Remote Assistance Library 
 - By Annotation: EnableMailAssistance
 ```bash
 @EnableMailAssistance 
