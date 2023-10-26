@@ -42,7 +42,7 @@
 ### <a id="mavenCentralDependency"></a>Maven Central Or Maven Repository Dependency
 - For Gradle Project
 ```bash
-  implementation 'io.github.jamalakida:java-mail-assistance-library:1.0.0'
+  implementation 'io.github.jamalakida:java-mail-assistance-library:2.0.0'
 ```
 
 -  For Maven Project
@@ -50,7 +50,7 @@
 <dependency>
     <groupId>io.github.jamalakida</groupId>
     <artifactId>java-mail-assistance-library</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 
@@ -92,15 +92,17 @@ spring.mail.properties.mail.smtp.auth=true
     
 ```
 
-
 ### E. <a id="usage-single-data"></a> Usage
 ###### 01. FOR SENDING TO SINGLE RECIPIENT:
 - Sending email:
 ```bash
+Syntax: 
+  
+    mailAssistance.sendMail(recipient_email_address,mail_subject, mail_body);
+    
 Example: 
   
- mailAssistance.sendMail("kennydoe@gmail.com", "janedoe@gmail.com",
-                "TESTING", "Hello Jamal");
+    mailAssistance.sendMail("janedoe@gmail.com","TESTING", "Hello Jamal");
 ```
 
 - Corresponding success Response:
@@ -126,10 +128,13 @@ Example:
 ###### 02. FOR SENDING TO MULTIPLE RECIPIENTS:
 - Sending email;
 ```bash
+Syntax: 
+  
+    mailAssistance.sendMail(lis_of_recipients_email_addresses,mail_subject, mail_body);
+    
 Example: 
   
-    mailAssistance.sendMail("noreply@pccb.go.tz", List.of("johndoe@gmail.com", "janedoe@gmail.com"),
-                "TESTING", "Hello Jamal");
+    mailAssistance.sendMail(List.of("johndoe@gmail.com", "janedoe@gmail.com"),"TESTING", "Hello Jamal");
 ```
 
 -  Corresponding success Response:

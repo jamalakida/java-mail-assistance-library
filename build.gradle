@@ -12,7 +12,7 @@ group 'com.jamal'
 archivesBaseName = 'mail-assistance-library'
 version '1.0.0'
 sourceCompatibility = '17'
-description = 'A Spring boot library for mail communication(Sending)'
+description = 'A Java(Spring boot) library for mail communication(Sending)'
 
 repositories {
     mavenCentral()

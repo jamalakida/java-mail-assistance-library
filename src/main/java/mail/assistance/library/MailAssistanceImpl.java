@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import mail.assistance.library.dto.Response;
 import mail.assistance.library.utils.MailResponseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailSendException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,9 @@ public class MailAssistanceImpl implements MailAssistance {
 
     @Autowired
     public MailResponseService response;
+
+    @Value("${spring.mail.username}")
+    private String senderEmail;
 
     /**
      * Create MImeMessage to be sent
@@ -96,31 +100,29 @@ public class MailAssistanceImpl implements MailAssistance {
 
     /**
      * For sending mail to a single recipient
-     * @param sender - Sender's email address
      * @param receiver - Receiver's email address
      * @param subject - Mail subject
      * @param body - Mail Body
      * @return - Return response Object with status as Boolean and messages as String
      * throws MessagingException - Handles exception while sending mail
      */
-    public Response sendMail(@NonNull String sender, @NonNull String receiver, @NonNull String subject, @NonNull String body){
-        MimeMessage message = this.returnMimeMessage(sender, receiver, subject, body);
+    public Response sendMail(@NonNull String receiver, @NonNull String subject, @NonNull String body){
+        MimeMessage message = this.returnMimeMessage(senderEmail, receiver, subject, body);
         return this.send(message, receiver);
     }
 
     /**
      * For sending mail to a multiple recipients
-     * @param sender - Sender's email address
      * @param receiverList - List of Receiver's email address
      * @param subject - Mail subject
      * @param body - Mail Body
      * @return - Return response Object with status as Boolean and messages as String
      */
-    public List<Response> sendMail(@NonNull String sender, @NonNull List<String> receiverList, @NonNull String subject, @NonNull String body){
+    public List<Response> sendMail(@NonNull List<String> receiverList, @NonNull String subject, @NonNull String body){
         List<Response> returnList = new ArrayList<>();
         receiverList.forEach(
                 receiver ->
-                        returnList.add(sendMail(sender, receiver, subject, body))
+                        returnList.add(sendMail(receiver, subject, body))
         );
         return returnList;
     }
