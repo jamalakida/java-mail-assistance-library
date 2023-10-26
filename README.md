@@ -100,7 +100,7 @@ spring.mail.properties.mail.smtp.auth=true
 Example: 
   
  mailAssistance.sendMail("kennydoe@gmail.com", "janedoe@gmail.com",
-                "MAIL LIBRARY", "Hello Jamal");
+                "TESTING", "Hello Jamal");
 ```
 
 - Corresponding success Response:
