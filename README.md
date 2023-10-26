@@ -65,20 +65,35 @@ Steps:
 ### A. Import libray as:
 - <a href="#libraryImportation">Dependency</a>
 
-### B. Instantiate the bean of the imported Remote Assistance Library (Use one the following technique)
+###  B. Add Mail Configuration properties in application.properties or bootstrap.properties
+```bash
+Example: 
+
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=your-gmail-email@gmail.com
+spring.mail.password=your-gmail-password
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.auth=true
+
+    
+```
+
+### C. Instantiate the bean of the imported Remote Assistance Library (Use one the following technique)
 - By Annotation: EnableMailAssistance
 ```bash
 @EnableMailAssistance 
 ```
 
-### <a id="dependencyInjection"></a> C. Dependency Injection (In a class, Abstract or Interface)
+### <a id="dependencyInjection"></a> D. Dependency Injection (In a class, Abstract or Interface)
 ```bash
   @Autowired
     protected MailAssistance mailAssistance;
     
 ```
 
-### D. <a id="usage-single-data"></a> Usage
+
+### E. <a id="usage-single-data"></a> Usage
 ###### 01. FOR SENDING TO SINGLE RECIPIENT:
 - Sending email:
 ```bash
