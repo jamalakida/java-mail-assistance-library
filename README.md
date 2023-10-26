@@ -129,7 +129,7 @@ Example:
 Example: 
   
     mailAssistance.sendMail("noreply@pccb.go.tz", List.of("johndoe@gmail.com", "janedoe@gmail.com"),
-                "MAIL LIBRARY", "Hello Jamal");
+                "TESTING", "Hello Jamal");
 ```
 
 -  Corresponding success Response:
